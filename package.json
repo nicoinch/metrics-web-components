@@ -1,37 +1,50 @@
 {
-    "name": "metrics-web-components",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "parser": "vue-eslint-parser",
-    "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc && vite build",
-        "preview": "vite preview",
-        "lint": "eslint --ext .js,.ts,vue --ignore-path .gitignore .",
-        "lint:fix": "eslint --ext .js,.vue,.ts --ignore-path .gitignore . --fix",
-        "prettier:check": "prettier . --check",
-        "prettier:format": "prettier . --write"
-    },
-    "dependencies": {
-        "vue": "^3.3.11"
-    },
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^6.17.0",
-        "@typescript-eslint/parser": "^6.17.0",
-        "@vitejs/plugin-vue": "^4.5.2",
-        "@vue/eslint-config-typescript": "^12.0.0",
-        "autoprefixer": "^10.4.16",
-        "eslint": "^8.56.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-prettier": "^5.1.2",
-        "eslint-plugin-vue": "^9.19.2",
-        "postcss": "^8.4.32",
-        "prettier": "^3.1.1",
-        "tailwindcss": "^3.4.0",
-        "typescript": "^5.2.2",
-        "vite": "^5.0.8",
-        "vue-eslint-parser": "^9.3.2",
-        "vue-tsc": "^1.8.25"
-    }
+  "name": "metrics-web-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "parser": "vue-eslint-parser",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.ts,vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.vue,.ts --ignore-path .gitignore . --fix",
+    "prettier:check": "prettier . --check",
+    "prettier:format": "prettier . --write",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/blocks": "^7.6.7",
+    "@storybook/test": "^7.6.7",
+    "@storybook/vue3": "^7.6.7",
+    "@storybook/vue3-vite": "^7.6.7",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-storybook": "^0.6.15",
+    "eslint-plugin-vue": "^9.19.2",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.7",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vue-eslint-parser": "^9.3.2",
+    "vue-tsc": "^1.8.25"
+  }
 }
