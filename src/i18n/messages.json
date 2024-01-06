@@ -1,0 +1,14 @@
+{
+    "en": {
+        "counter": "Counter",
+        "plus": "+",
+        "minus": "-",
+        "step": "Step"
+    },
+    "fr": {
+        "counter": "Compteur",
+        "plus": "+",
+        "minus": "-",
+        "step": "Pas"
+    }
+}

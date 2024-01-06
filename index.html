@@ -10,17 +10,20 @@
                 localStorage.theme === 'dark' ||
                 (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
             ) {
+                document.documentElement.style.colorScheme = 'dark';
+                document.documentElement.setAttribute('data-mode', 'dark');
                 document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
             } else {
+                document.documentElement.style.colorScheme = 'light';
+                document.documentElement.setAttribute('data-mode', 'light');
                 document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
             }
-            localStorage.theme = 'light';
-            localStorage.theme = 'dark';
-            localStorage.removeItem('theme');
-
+            // localStorage.removeItem('theme');
         </script>
     </head>
-    <body>
+    <body class="bg-default-bg">
         <div id="app"></div>
         <script type="module" src="/src/main.ts"></script>
     </body>

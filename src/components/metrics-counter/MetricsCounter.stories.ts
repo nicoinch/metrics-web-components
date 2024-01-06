@@ -1,7 +1,7 @@
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { userEvent, within } from '@storybook/testing-library';
-import Counter from './Counter.vue';
+import Counter from './MetricsCounter.ce.vue';
 import { ref } from 'vue';
 import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
@@ -26,6 +26,14 @@ export const Basic: Story = {
     args: {
         max: 10,
         modelValue: 3,
+    },
+};
+
+export const FullWidth: Story = {
+    args: {
+        max: 10,
+        modelValue: 3,
+        fullWidth: true,
     },
 };
 

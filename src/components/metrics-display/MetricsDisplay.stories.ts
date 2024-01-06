@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import Display from './Display.vue';
+import Display from './MetricsDisplay.ce.vue';
 import { ref } from 'vue';
 import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
@@ -23,6 +23,6 @@ type Story = StoryObj<typeof meta>;
 export const Basic: Story = {
     args: {
         value: 3,
-        label: 'Count',
+        labelKey: 'counter',
     },
 };

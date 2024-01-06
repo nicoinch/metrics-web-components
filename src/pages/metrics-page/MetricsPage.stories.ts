@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import MetricsPage from './MetricsPage.vue';
-import { darkModeDecorator } from '../../.storybook/dark-mode-decorator.ts';
+import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
     title: 'Pages/MetricsPage',
