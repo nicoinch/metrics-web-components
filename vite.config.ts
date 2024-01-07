@@ -14,4 +14,14 @@ export default defineConfig({
         }),
         vueI18n({}),
     ],
+    build: {
+        lib: {
+            entry: './src/main.ce.ts',
+            name: 'metrics-wc',
+            fileName: 'metrics-wc',
+        },
+    },
+    define: {
+        'process.env': process.env,
+    },
 });

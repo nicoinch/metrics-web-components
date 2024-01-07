@@ -12,7 +12,7 @@ const meta = {
             const count = ref(3);
             return { args, count };
         },
-        template: `<DarkModeSwitcher class="m-4" v-bind="args" />`,
+        template: `<DarkModeSwitcher class="m-4 theme-muted" v-bind="args" />`,
     }),
     decorators: [darkModeDecorator],
 } satisfies Meta<typeof DarkModeSwitcher>;

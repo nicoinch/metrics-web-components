@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-stretch theme-muted">
+    <div class="flex flex-col items-stretch">
         <div v-for="(translations, code) in languages" :key="code" class="flex-grow">
             <button
                 v-if="code !== locale"
@@ -7,6 +7,7 @@
                     'flex items-center gap-2 px-2 py-0.5 text-sm text-left w-fit bg-primary-content-bg hover:bg-primary-content-bg-hover text-primary-text hover:bg-primary-content-bg-hover hover:border-primary-focus focus-visible:border-primary-focus focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary-focus focus:border-primary-focus focus:outline focus:outline-1 focus:outline-primary-focus' +
                     (code === locale ? ' opacity-50 pointer-events-none' : '')
                 "
+                data-testid="language-picker"
                 @click="onLocaleChange(code)"
             >
                 <span class="text-2xl">{{ translations.flag }}</span>

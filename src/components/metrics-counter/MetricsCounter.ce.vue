@@ -10,7 +10,7 @@
                 data-testid="counter-decrease-button"
                 @click="onDecrement"
             >
-                <span class="text-2xl">{{ t('minus') }}</span>
+                <span class="text-2xl uppercase font-semibold">{{ t('minus') }}</span>
                 <span v-if="props.showStep" class="text-xs">{{ t('step') }} {{ props.step }}</span>
             </button>
             <span
@@ -32,7 +32,7 @@
                 data-testid="counter-increase-button"
                 @click="onIncrement"
             >
-                <span class="text-2xl">{{ t('plus') }}</span>
+                <span class="text-2xl uppercase font-semibold">{{ t('plus') }}</span>
                 <span v-if="props.showStep" class="text-xs">{{ t('step') }} {{ props.step }}</span>
             </button>
         </div>

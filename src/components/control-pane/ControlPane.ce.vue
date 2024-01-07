@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
         <button type="button" :class="buttonClasses" data-testid="control-pane-button" @click="onClick">
-            <span class="text-2xl">{{ t('reset') }}</span>
+            <span class="text-md uppercase font-semibold">{{ t('reset') }}</span>
         </button>
     </div>
 </template>

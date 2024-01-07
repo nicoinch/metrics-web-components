@@ -14,7 +14,9 @@
         "prettier:format": "prettier . --write",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.js -o ./style-for-wc.css --postcss"
+        "tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.js -o ./style-for-wc.css --postcss",
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run"
     },
     "dependencies": {
         "vue": "^3.4.5",
@@ -36,6 +38,7 @@
         "@vitejs/plugin-vue": "^4.5.2",
         "@vue/eslint-config-typescript": "^12.0.0",
         "autoprefixer": "^10.4.16",
+        "cypress": "^13.6.2",
         "eslint": "^8.56.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-prettier": "^5.1.2",

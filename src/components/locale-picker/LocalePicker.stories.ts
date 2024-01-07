@@ -12,7 +12,7 @@ const meta = {
             const count = ref(3);
             return { args, count };
         },
-        template: `<LocalePicker class="m-4" v-bind="args" />`,
+        template: `<LocalePicker class="m-4 theme-muted" v-bind="args" />`,
     }),
     decorators: [darkModeDecorator],
 } satisfies Meta<typeof LocalePicker>;

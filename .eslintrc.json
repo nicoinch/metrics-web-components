@@ -15,15 +15,9 @@
         "sourceType": "module",
         "parser": "@typescript-eslint/parser",
         "project": "./tsconfig.json",
-        "extraFileExtensions": [
-            ".vue"
-        ]
+        "extraFileExtensions": [".vue"]
     },
-    "plugins": [
-        "vue",
-        "@typescript-eslint",
-        "prettier"
-    ],
+    "plugins": ["vue", "@typescript-eslint", "prettier"],
     "rules": {
         "prettier/prettier": "error"
     }
