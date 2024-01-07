@@ -14,7 +14,7 @@
         "prettier:format": "prettier . --write",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.js -o ./src/assets/css/style.css --postcss"
+        "tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.js -o ./style-for-wc.css --postcss"
     },
     "dependencies": {
         "vue": "^3.4.5",

@@ -1,28 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import MetricsDisplay from './MetricsDisplay.ce.vue';
+import LocalePicker from './LocalePicker.ce.vue';
 import { ref } from 'vue';
 import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
-    title: 'Components/MetricsDisplay',
-    component: MetricsDisplay,
+    title: 'Components/LocalePicker',
+    component: LocalePicker,
     render: (args) => ({
-        components: { MetricsDisplay },
+        components: { LocalePicker },
         setup() {
             const count = ref(3);
             return { args, count };
         },
-        template: '<MetricsDisplay class="m-4" v-bind="args" v-model="count" />',
+        template: `<LocalePicker class="m-4" v-bind="args" />`,
     }),
     decorators: [darkModeDecorator],
-} satisfies Meta<typeof MetricsDisplay>;
+} satisfies Meta<typeof LocalePicker>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Basic: Story = {
-    args: {
-        value: 3,
-        labelKey: 'counter',
-    },
-};
+export const Basic: Story = {};

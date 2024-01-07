@@ -12,7 +12,6 @@ export default defineComponent({
     },
     setup(props) {
         provide(I18nInjectionKey, i18n);
-
         watchEffect(() => {
             i18n.global.locale.value = props.locale;
         });

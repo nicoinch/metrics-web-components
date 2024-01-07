@@ -42,7 +42,7 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
 
-const count = defineModel<number>({ default: 0, required: true });
+const count = defineModel<number>({ default: 0, required: true, get: (v) => Number(v), set: (v) => Number(v) });
 const props = withDefaults(
     defineProps<{
         /**
@@ -98,5 +98,5 @@ const { t } = useI18n({
 </script>
 
 <style scoped>
-@import '../../assets/css/style.css';
+@import '../../../style-for-wc.css';
 </style>

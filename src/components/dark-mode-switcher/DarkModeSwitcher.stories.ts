@@ -1,28 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import MetricsDisplay from './MetricsDisplay.ce.vue';
+import DarkModeSwitcher from './DarkModeSwitcher.ce.vue';
 import { ref } from 'vue';
 import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
-    title: 'Components/MetricsDisplay',
-    component: MetricsDisplay,
+    title: 'Components/DarkModeSwitcher',
+    component: DarkModeSwitcher,
     render: (args) => ({
-        components: { MetricsDisplay },
+        components: { DarkModeSwitcher },
         setup() {
             const count = ref(3);
             return { args, count };
         },
-        template: '<MetricsDisplay class="m-4" v-bind="args" v-model="count" />',
+        template: `<DarkModeSwitcher class="m-4" v-bind="args" />`,
     }),
     decorators: [darkModeDecorator],
-} satisfies Meta<typeof MetricsDisplay>;
+} satisfies Meta<typeof DarkModeSwitcher>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Basic: Story = {
-    args: {
-        value: 3,
-        labelKey: 'counter',
-    },
-};
+export const Basic: Story = {};

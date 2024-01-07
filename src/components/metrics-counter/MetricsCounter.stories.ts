@@ -1,23 +1,23 @@
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { userEvent, within } from '@storybook/testing-library';
-import Counter from './MetricsCounter.ce.vue';
+import MetricsCounter from './MetricsCounter.ce.vue';
 import { ref } from 'vue';
 import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
-    title: 'Components/Counter',
-    component: Counter,
+    title: 'Components/MetricsCounter',
+    component: MetricsCounter,
     render: (args) => ({
-        components: { Counter },
+        components: { MetricsCounter },
         setup() {
             const count = ref(3);
             return { args, count };
         },
-        template: '<counter class="m-4" v-bind="args" v-model="count" />',
+        template: '<MetricsCounter class="m-4" v-bind="args" v-model="count" />',
     }),
     decorators: [darkModeDecorator],
-} satisfies Meta<typeof Counter>;
+} satisfies Meta<typeof MetricsCounter>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -42,12 +42,12 @@ export const BigNumber: Story = {
         modelValue: 300000,
     },
     render: (args) => ({
-        components: { Counter },
+        components: { MetricsCounter },
         setup() {
             const count = ref(300000);
             return { args, count };
         },
-        template: '<counter class="m-4" v-bind="args" v-model="count" />',
+        template: '<MetricsCounter class="m-4" v-bind="args" v-model="count" />',
     }),
 };
 
@@ -57,12 +57,12 @@ export const HideValue: Story = {
         hideValue: true,
     },
     render: (args) => ({
-        components: { Counter },
+        components: { MetricsCounter },
         setup() {
             const count = ref(3);
             return { args, count };
         },
-        template: '<counter class="m-4" v-bind="args" v-model="count" />',
+        template: '<MetricsCounter class="m-4" v-bind="args" v-model="count" />',
     }),
 };
 
@@ -72,12 +72,12 @@ export const ShowStep: Story = {
         showStep: true,
     },
     render: (args) => ({
-        components: { Counter },
+        components: { MetricsCounter },
         setup() {
             const count = ref(3);
             return { args, count };
         },
-        template: '<counter class="m-4" v-bind="args" v-model="count" />',
+        template: '<MetricsCounter class="m-4" v-bind="args" v-model="count" />',
     }),
 };
 

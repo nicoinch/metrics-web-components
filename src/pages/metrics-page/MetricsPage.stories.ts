@@ -7,7 +7,7 @@ const meta = {
     component: MetricsPage,
     render: () => ({
         components: { MetricsPage },
-        template: '<metrics-page />',
+        template: '<MetricsPage class="p-4" />',
     }),
     parameters: {
         layout: 'fullscreen',

@@ -1,17 +1,11 @@
 <script setup lang="ts">
 import MetricsPage from './pages/metrics-page/MetricsPage.vue';
-import { ref } from 'vue';
-
-const locale = ref<string>('en');
 </script>
 
 <template>
-    <div class="flex flex-col gap-4">
-        <MetricsPage class="w-screen" />
-        <m-i18n-host .locale="locale">
-            <h1 class="text-default-text">Web component</h1>
-            <m-display />
-            <m-counter />
-        </m-i18n-host>
+    <div class="flex justify-center mx-auto max-w-5xl">
+        <div class="flex-1 p-4 flex flex-col gap-3">
+            <MetricsPage />
+        </div>
     </div>
 </template>

@@ -3,7 +3,7 @@
         <span class="font-semibold text-lg self-start px-2 text-primary-text" data-testid="display-label">
             {{ props.labelKey ? t(props.labelKey) : props.labelKey }}
         </span>
-        <span class="font-semibold text-6xl self-end text-primary-text dark:text-white" data-testid="display-value">
+        <span class="font-semibold text-6xl self-center text-primary-text dark:text-white" data-testid="display-value">
             {{ props.value }}
         </span>
     </div>
@@ -28,3 +28,7 @@ const props = defineProps<{
     labelKey?: string;
 }>();
 </script>
+
+<style scoped>
+@import '../../../style-for-wc.css';
+</style>

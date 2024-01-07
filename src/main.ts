@@ -3,14 +3,34 @@ import './style.css';
 import App from './App.vue';
 import { i18n } from './i18n/i18n';
 import I18nHost from './i18n/I18nHost.vue';
-import Counter from './components/metrics-counter/MetricsCounter.ce.vue';
-import Display from './components/metrics-display/MetricsDisplay.ce.vue';
+import MetricsCounter from './components/metrics-counter/MetricsCounter.ce.vue';
+import DisplayMetrics from './components/metrics-display/MetricsDisplay.ce.vue';
+import ControlPane from './components/control-pane/ControlPane.ce.vue';
+import LocalePicker from './components/locale-picker/LocalePicker.ce.vue';
+import DarkModeSwitcher from './components/dark-mode-switcher/DarkModeSwitcher.ce.vue';
 
 const I18nHostElement = defineCustomElement(I18nHost);
-const CounterElement = defineCustomElement(Counter);
-const DisplayElement = defineCustomElement(Display);
-customElements.define('m-i18n-host', I18nHostElement);
-customElements.define('m-counter', CounterElement);
-customElements.define('m-display', DisplayElement);
+customElements.define('wc-i18n-host', I18nHostElement);
+const MetricsCounterElement = defineCustomElement(MetricsCounter);
+customElements.define('wc-metrics-counter', MetricsCounterElement);
+const DisplayMetricsElement = defineCustomElement(DisplayMetrics);
+customElements.define('wc-display-metrics', DisplayMetricsElement);
+const ControlPaneElement = defineCustomElement(ControlPane);
+customElements.define('wc-control-pane', ControlPaneElement);
+const LocalePickerElement = defineCustomElement(LocalePicker);
+customElements.define('wc-locale-picker', LocalePickerElement);
+const DarkModeSwitcherElement = defineCustomElement(DarkModeSwitcher);
+customElements.define('wc-dark-mode-switcher', DarkModeSwitcherElement);
 
 createApp(App).use(i18n).mount('#app');
+
+declare module 'vue' {
+    export interface GlobalComponents {
+        I18nHostElement: typeof I18nHostElement;
+        MetricsCounterElement: typeof MetricsCounterElement;
+        DisplayMetricsElement: typeof DisplayMetricsElement;
+        ControlPaneElement: typeof ControlPaneElement;
+        LocalePickerElement: typeof LocalePickerElement;
+        DarkModeSwitcherElement: typeof DarkModeSwitcherElement;
+    }
+}

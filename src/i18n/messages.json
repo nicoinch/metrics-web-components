@@ -1,14 +1,22 @@
 {
     "en": {
+        "flag": "🇬🇧",
+        "label": "English",
+        "switchTo": "Switch to",
         "counter": "Counter",
         "plus": "+",
         "minus": "-",
-        "step": "Step"
+        "step": "Step",
+        "reset": "Reset"
     },
     "fr": {
+        "flag": "🇫🇷",
+        "label": "Français",
+        "switchTo": "Basculer en",
         "counter": "Compteur",
         "plus": "+",
         "minus": "-",
-        "step": "Pas"
+        "step": "Pas",
+        "reset": "Réinitialiser"
     }
 }
