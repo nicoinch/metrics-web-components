@@ -12,10 +12,15 @@ const count3 = ref(1);
 </script>
 
 <template>
-    <div class="flex-1 p-4 flex flex-col gap-3">
-        <div class="flex gap-3 w-full justify-end">
-            <LocalePicker class="max-w-fit self-end theme-muted" />
-            <DarkModeSwitcher class="max-w-fit self-end theme-muted" />
+    <div class="flex-1 p-4 flex flex-col gap-6">
+        <div class="flex gap-3 w-full justify-end flex-col md:flex-row">
+            <div class="flex gap-3 w-full justify-end order-first md:order-last">
+                <LocalePicker class="max-w-fit self-end theme-muted" />
+                <DarkModeSwitcher class="max-w-fit self-end theme-muted" />
+            </div>
+            <div class="flex gap-3 w-full justify-start text-4xl whitespace-nowrap text-default-text">
+                <strong>Metrics</strong> - Vue
+            </div>
         </div>
         <div class="flex gap-4 flex-col sm:flex-row">
             <div class="flex flex-col gap-3 w-full border border-primary-focus rounded-xl p-4">

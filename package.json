@@ -6,15 +6,16 @@
     "parser": "vue-eslint-parser",
     "scripts": {
         "dev": "vite",
-        "build": "vue-tsc && vite build",
+        "build-tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.js -o ./style-for-wc.css --postcss",
+        "build": "npm run build-tailwind && vue-tsc && vite build -c vite.lib.config.ts && vite build",
         "preview": "vite preview",
+        "preview-lib": "vite preview -c vite.lib.config.ts",
         "lint": "eslint --ext .js,.ts,vue --ignore-path .gitignore .",
         "lint:fix": "eslint --ext .js,.vue,.ts --ignore-path .gitignore . --fix",
         "prettier:check": "prettier . --check",
         "prettier:format": "prettier . --write",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.js -o ./style-for-wc.css --postcss",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run"
     },

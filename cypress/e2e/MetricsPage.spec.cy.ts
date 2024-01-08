@@ -1,6 +1,6 @@
 [
-    { label: 'Vue3', url: 'http://localhost:5173/' },
-    { label: 'Web components', url: 'http://localhost:4173/' },
+    { label: 'Vue3', url: 'http://localhost:4173/' },
+    { label: 'Web components', url: 'http://localhost:4174/' },
 ].forEach(({ url, label }) => {
     describe(`Testing ${label}:`, () => {
         describe(`Metrics display`, () => {

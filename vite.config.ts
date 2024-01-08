@@ -4,24 +4,5 @@ import vueI18n from '@intlify/unplugin-vue-i18n/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [
-        vue({
-            template: {
-                compilerOptions: {
-                    isCustomElement: (tag) => tag.includes('-'),
-                },
-            },
-        }),
-        vueI18n({}),
-    ],
-    build: {
-        lib: {
-            entry: './src/main.ce.ts',
-            name: 'metrics-wc',
-            fileName: 'metrics-wc',
-        },
-    },
-    define: {
-        'process.env': process.env,
-    },
+    plugins: [vue(), vueI18n({})],
 });

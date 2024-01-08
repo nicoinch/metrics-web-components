@@ -63,10 +63,15 @@
     <body class="bg-default-bg">
         <div class="w-full">
             <div class="flex justify-center mx-auto max-w-5xl">
-                <wc-i18n-host id="i18n-host-1" class="flex-1 p-4 flex flex-col gap-3">
-                    <div class="flex gap-3 w-full justify-end theme-muted">
-                        <wc-locale-picker id="locale-picker-1" class="max-w-fit self-end"></wc-locale-picker>
-                        <wc-dark-mode-switcher class="max-w-fit self-end"></wc-dark-mode-switcher>
+                <wc-i18n-host id="i18n-host-1" class="flex-1 p-4 flex flex-col gap-6">
+                    <div class="flex gap-3 w-full justify-end flex-col md:flex-row">
+                        <div class="flex gap-3 w-full justify-end order-first md:order-last theme-muted">
+                            <wc-locale-picker id="locale-picker-1" class="max-w-fit self-end"></wc-locale-picker>
+                            <wc-dark-mode-switcher class="max-w-fit self-end"></wc-dark-mode-switcher>
+                        </div>
+                        <div class="flex gap-3 w-full justify-start text-4xl whitespace-nowrap text-default-text">
+                            <strong>Metrics</strong> - Web components
+                        </div>
                     </div>
                     <div class="flex gap-4 flex-col sm:flex-row">
                         <div class="flex flex-col gap-3 w-full border border-primary-focus rounded-xl p-4">
