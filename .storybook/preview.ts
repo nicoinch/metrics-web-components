@@ -26,6 +26,7 @@ const preview: Preview = {
     globalTypes: {
         locale: {
             name: 'Locale',
+            defaultValue: 'en',
             description: 'Internationalization locale',
             toolbar: {
                 icon: 'globe',
