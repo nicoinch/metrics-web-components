@@ -6,7 +6,7 @@
     "parser": "vue-eslint-parser",
     "scripts": {
         "dev": "vite",
-        "build-tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.js -o ./style-for-wc.css --postcss",
+        "build-tailwind": "tailwindcss build -i ./src/style.css -c ./tailwind.config.ts -o ./style-for-wc.css --postcss",
         "build": "npm run build-tailwind && vue-tsc && vite build -c vite.lib.config.ts && vite build",
         "preview": "vite preview",
         "preview-lib": "vite preview -c vite.lib.config.ts",
