@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./metrics.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metrics</title>
+    <link rel="stylesheet" crossorigin href="./style.css" />
+    <script type="module" crossorigin src="./metrics-wc.js" />
+    <script></script>
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.style.colorScheme = "dark";
+        document.documentElement.setAttribute("data-mode", "dark");
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+      } else {
+        document.documentElement.style.colorScheme = "light";
+        document.documentElement.setAttribute("data-mode", "light");
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "light";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        [
+          { index: 0, initialValue: 3 },
+          { index: 1, initialValue: 0 },
+          { index: 2, initialValue: 1 },
+        ].forEach((block) => {
+          const i18nHost = document.getElementById(
+            "i18n-host-" + (block.index + 1)
+          );
+          const display = document.getElementById(
+            "display-metrics-" + (block.index + 1)
+          );
+          const counter = document.getElementById(
+            "metrics-counter-" + (block.index + 1)
+          );
+          const controlPane = document.getElementById(
+            "control-pane-" + (block.index + 1)
+          );
+          const localePicker = document.getElementById(
+            "locale-picker-" + (block.index + 1)
+          );
+
+          if (display && display.value) {
+            display.value =
+              counter && counter.modelValue ? counter.modelValue : 0;
+          }
+
+          counter?.addEventListener("update:modelValue", (e) => {
+            display.value = e.detail[0];
+          });
+
+          controlPane?.addEventListener("onResetCounter", () => {
+            counter.modelValue = 0;
+            display.value = 0;
+          });
+
+          localePicker?.addEventListener("onLocaleChange", (code) => {
+            i18nHost.setAttribute("locale", code.detail[0]);
+          });
+
+          counter.modelValue = block.initialValue;
+          display.value = counter.modelValue;
+        });
+      });
+    </script>
+  </head>
+
+  <body class="bg-default-bg">
+    <div class="w-full">
+      <div class="flex justify-center mx-auto max-w-5xl">
+        <wc-i18n-host id="i18n-host-1" class="flex-1 p-4 flex flex-col gap-6">
+          <div class="flex gap-3 w-full justify-end flex-col md:flex-row">
+            <div
+              class="flex gap-3 w-full justify-end order-first md:order-last theme-muted"
+            >
+              <wc-locale-picker
+                id="locale-picker-1"
+                class="max-w-fit self-end"
+              ></wc-locale-picker>
+              <wc-dark-mode-switcher
+                class="max-w-fit self-end"
+              ></wc-dark-mode-switcher>
+            </div>
+            <div
+              class="flex gap-3 w-full justify-start text-4xl whitespace-nowrap text-default-text"
+            >
+              <strong>Metrics</strong> - Web components
+            </div>
+          </div>
+          <div class="flex gap-4 flex-col sm:flex-row">
+            <div
+              class="flex flex-col gap-3 w-full border border-primary-focus rounded-xl p-4"
+            >
+              <wc-display-metrics
+                id="display-metrics-1"
+                label-key="counter"
+              ></wc-display-metrics>
+              <wc-metrics-counter
+                id="metrics-counter-1"
+                max="6"
+                full-width
+                hide-value
+              ></wc-metrics-counter>
+              <wc-control-pane id="control-pane-1" full-width></wc-control-pane>
+            </div>
+            <div
+              class="flex flex-col gap-3 w-full border border-primary-focus rounded-xl p-4 theme-1"
+            >
+              <wc-display-metrics
+                id="display-metrics-2"
+                label-key="counter"
+              ></wc-display-metrics>
+              <wc-metrics-counter
+                id="metrics-counter-2"
+                max="6"
+                full-width
+                hide-value
+              ></wc-metrics-counter>
+              <wc-control-pane id="control-pane-2" full-width></wc-control-pane>
+            </div>
+            <div
+              class="flex flex-col gap-3 w-full border border-primary-focus rounded-xl p-4 theme-2"
+            >
+              <wc-display-metrics
+                id="display-metrics-3"
+                label-key="counter"
+              ></wc-display-metrics>
+              <wc-metrics-counter
+                id="metrics-counter-3"
+                max="6"
+                full-width
+                hide-value
+              ></wc-metrics-counter>
+              <wc-control-pane id="control-pane-3" full-width></wc-control-pane>
+            </div>
+          </div>
+        </wc-i18n-host>
+      </div>
+    </div>
+  </body>
+</html>

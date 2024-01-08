@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./dist-lib/metrics.svg" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metrics</title>
-    <link rel="stylesheet" crossorigin href="./dist-lib/style.css" />
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -23,14 +22,10 @@
         localStorage.theme = "light";
       }
     </script>
+    <script type="module" crossorigin src="./assets/index-XN5NbvCV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-izlE8yx7.css" />
   </head>
   <body class="bg-default-bg">
-    <div
-      class="w-full flex flex-col gap-4 justify-center items-center text-4xl"
-    >
-      <a href="./storybook-static/">Storybook</a>
-      <a href="./dist/index.html">Vue application</a>
-      <a href="./dist-lib/index.html">Web components integration</a>
-    </div>
+    <div id="app"></div>
   </body>
 </html>
