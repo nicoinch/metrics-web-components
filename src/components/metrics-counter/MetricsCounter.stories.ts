@@ -7,7 +7,6 @@ import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
     title: 'Components/MetricsCounter',
-    component: MetricsCounter,
     render: (args) => ({
         components: { MetricsCounter },
         setup() {

@@ -5,7 +5,6 @@ import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
     title: 'Components/LocalePicker',
-    component: LocalePicker,
     render: (args) => ({
         components: { LocalePicker },
         setup() {

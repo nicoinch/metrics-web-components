@@ -6,7 +6,6 @@ import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
     title: 'Components/ControlPane',
-    component: ControlPane,
     render: (args) => ({
         components: { ControlPane },
         setup() {

@@ -4,7 +4,6 @@ import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
     title: 'Pages/MetricsPage',
-    component: MetricsPage,
     render: () => ({
         components: { MetricsPage },
         template: '<MetricsPage class="p-4" />',

@@ -5,7 +5,6 @@ import { darkModeDecorator } from '../../../.storybook/dark-mode-decorator.ts';
 
 const meta = {
     title: 'Components/DarkModeSwitcher',
-    component: DarkModeSwitcher,
     render: (args) => ({
         components: { DarkModeSwitcher },
         setup() {
