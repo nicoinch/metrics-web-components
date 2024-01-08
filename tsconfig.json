@@ -20,7 +20,7 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "./**/*.ts", "postcss.config.js"],
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "./**/*.ts"],
     "exclude": ["./*.js"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

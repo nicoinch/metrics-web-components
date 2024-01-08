@@ -20,5 +20,6 @@
     "plugins": ["vue", "@typescript-eslint", "prettier"],
     "rules": {
         "prettier/prettier": "error"
-    }
+    },
+    "ignorePatterns": ["postcss.config.js"]
 }

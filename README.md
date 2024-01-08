@@ -50,7 +50,7 @@ To build the application, run `npm run build` at the project root.
 
 It will generate a `dist` folder containing the built application and a `dist-lib` folder containing the built web components library and the example web page.
 
-A preliminary step in included in this command, `npm run tailwind` to generate the CSS styles needed by web components in `style-for-wc.css`.
+A preliminary step is included in this command, `npm run tailwind` to generate the CSS styles needed by web components in `style-for-wc.css`.
 
 ## Preview the application
 
